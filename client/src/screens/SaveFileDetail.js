@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom'; // To get the ID from the URL
+import { useParams } from 'react-router-dom';
 import './SaveFileDetail.css';
 import Button from '../components/Button';
 
 const SaveFileDetail = () => {
-  const { id } = useParams(); // Get the save file ID from the URL
+  const { id } = useParams();
   const [saveFile, setSaveFile] = useState(null);
 
   useEffect(() => {
