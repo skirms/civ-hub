@@ -1,0 +1,30 @@
+.save-file-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.save-file-detail h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.save-file-detail p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.save-file-detail button {
+  margin-top: 20px;
+  width: 30%;
+  padding: 10px;
+  background-color: orange;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
