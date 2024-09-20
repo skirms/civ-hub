@@ -10,10 +10,9 @@ const SaveFileDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/saveFiles`)
+      .get(`http://localhost:3001/api/saveFiles/${id}`)
       .then((response) => {
-        const file = response.data.find((file) => file.id === parseInt(id));
-        setSaveFile(file);
+        setSaveFile(response.data);
       })
       .catch((error) => {
         console.error('Error fetching save file details:', error);
@@ -29,27 +28,31 @@ const SaveFileDetail = () => {
       <h2>{saveFile.title}</h2>
       <p>
         <strong>Leader: </strong>
-        {saveFile.description.leader}
+        <span className="leader-info">{saveFile.leader}</span>
       </p>
       <p>
         <strong>Difficulty: </strong>
-        {saveFile.description.difficulty}
+        <span className="difficulty-info">{saveFile.gameDifficulty}</span>
       </p>
       <p>
         <strong>Map: </strong>
-        {saveFile.description.map}
+        <span className="map-info">{saveFile.map}</span>
       </p>
       <p>
-        <strong>Size: </strong>
-        {saveFile.description.size}
+        <strong>Map Size: </strong>
+        {saveFile.mapSize}
       </p>
       <p>
-        <strong>Speed: </strong>
-        {saveFile.description.speed}
+        <strong>Game Speed: </strong>
+        {saveFile.gameSpeed}
       </p>
       <p>
-        <strong>Mods: </strong>
-        {saveFile.description.mods}
+        <strong>Resource Quantity: </strong>
+        {saveFile.resourceQuantity}
+      </p>
+      <p>
+        <strong>Description: </strong>
+        <span className="description">{saveFile.description}</span>
       </p>
       <Button
         text="Download"

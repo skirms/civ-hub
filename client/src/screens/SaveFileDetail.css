@@ -1,30 +1,47 @@
 .save-file-detail {
   max-width: 800px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  margin: 40px auto;
+  background-color: #f2e6d4;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #1b365d;
 }
 
 .save-file-detail h2 {
-  font-size: 2em;
+  font-size: 2rem;
   margin-bottom: 20px;
-  color: #333;
+  color: #d4af37;
+  font-family: 'Roboto', sans-serif;
 }
 
 .save-file-detail p {
-  font-size: 1.2em;
-  margin: 10px 0;
+  font-size: 1.1rem;
+  margin: 15px 0;
+  color: #6e6259;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.save-file-detail button {
-  margin-top: 20px;
-  width: 30%;
-  padding: 10px;
-  background-color: orange;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
+.leader-info {
+  color: #1b365d;
+  font-weight: bold;
+}
+
+.difficulty-info {
+  color: #c2571a;
+  font-weight: bold;
+}
+
+.map-info {
+  color: #556b2f;
+  font-weight: bold;
+}
+
+.save-file-detail .description {
+  font-size: 1.2rem;
+  color: #d4af37;
+  font-family: 'Roboto', sans-serif;
+  white-space: normal;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }

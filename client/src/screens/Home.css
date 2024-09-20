@@ -1,39 +1,39 @@
 .homepage {
   text-align: center;
+  padding: 40px 20px;
+  background-color: #f2e6d4;
 }
 
 .save-file-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.save-file-card {
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 10px;
-  width: 300px;
-  text-align: left;
-  transition: transform 0.2s ease-in-out;
-  cursor: pointer;
-}
-
-.save-file-card:hover {
-  transform: scale(1.05);
-}
-
-.save-file-card h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  gap: 20px;
 }
 
 .save-file-card p {
   margin: 5px 0;
+  color: #6e6259;
+  font-size: 0.9rem;
 }
 
-.button {
-  display: block;
-  margin-top: 15px;
+.leader-info {
+  color: #1b365d;
+}
+
+.difficulty-info {
+  color: #c2571a;
+}
+
+.map-info {
+  color: #556b2f;
+}
+
+@media (max-width: 768px) {
+  .save-file-card {
+    width: 100%;
+  }
+  .save-file-list {
+    gap: 10px;
+  }
 }

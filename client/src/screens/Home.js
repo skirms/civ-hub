@@ -26,52 +26,33 @@ const Home = () => {
         {saveFiles.length > 0 ? (
           saveFiles.map((file) => (
             <Link
-              to={`/save/${file.id}`}
-              key={file.id}
+              to={`/save/${file._id}`}
+              key={file._id}
               style={{
                 color: 'inherit',
                 textDecoration: 'inherit',
               }}
             >
-              {' '}
-              <Card key={file.id}>
-                <h2>{file.title}</h2>
+              <Card title={file.title}>
+                {' '}
                 <p>
                   <strong>Leader: </strong>
-                  {file.description.leader}
+                  <span className="leader-info">{file.leader}</span>
                 </p>
                 <p>
                   <strong>Difficulty: </strong>
-                  {file.description.difficulty}
+                  <span className="difficulty-info">{file.gameDifficulty}</span>
                 </p>
                 <p>
                   <strong>Map: </strong>
-                  {file.description.map}
+                  <span className="map-info">{file.map}</span>
                 </p>
-                <p>
-                  <strong>Size: </strong>
-                  {file.description.size}
-                </p>
-                <p>
-                  <strong>Speed: </strong>
-                  {file.description.speed}
-                </p>
-                <p>
-                  <strong>Mods: </strong>
-                  {file.description.mods}
-                </p>
-                <Button
-                  text="Download"
-                  onClick={() =>
-                    console.log(`Download clicked for ${file.title}`)
-                  }
-                  variant="primary"
-                />
+                <Button text="View Details" variant="primary" />
               </Card>
             </Link>
           ))
         ) : (
-          <p>Loading save files...</p>
+          <p>Loading</p>
         )}
       </div>
     </div>
