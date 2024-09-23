@@ -288,7 +288,7 @@ const Upload = () => {
             showAdditionalSettings ? 'visible' : ''
           }`}
         >
-          {/* All optional inside here */}
+          {/* All optional here */}
 
           {/* Start Position Balance */}
           <div className="form-group">
