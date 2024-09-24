@@ -67,7 +67,10 @@ const Home = () => {
                 textDecoration: 'inherit',
               }}
             >
-              <Card title={file.title}>
+              <Card
+                title={file.title}
+                startLocationImage={file.startLocationImage}
+              >
                 <p>
                   <strong>Leader: </strong>
                   {file.leader}

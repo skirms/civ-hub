@@ -37,6 +37,16 @@ const Filter = ({ filters, setFilters }) => {
     });
   };
 
+  const handleResetFilters = () => {
+    setFilters({
+      civilization: [],
+      leader: [],
+      difficulty: [],
+      gameSpeed: [],
+      mapSize: [],
+    });
+  };
+
   return (
     <div className="filter">
       {/* Civilization Filter */}
@@ -272,6 +282,9 @@ const Filter = ({ filters, setFilters }) => {
           </div>
         )}
       </div>
+      <button className="reset-filters" onClick={handleResetFilters}>
+        Reset Filters
+      </button>
     </div>
   );
 };

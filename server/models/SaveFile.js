@@ -181,22 +181,34 @@ const saveFileSchema = new mongoose.Schema({
       'Tech and Civic Shuffle Mode',
       'Zombie Defense Mode',
     ],
+    default: [],
   },
-  startPositionBalance: {
+
+  description: {
     type: String,
     required: true,
+    minlength: 20,
+    maxlength: 1000,
+  },
+  saveFile: {
+    type: String,
+    required: true,
+  },
+  //
+  //
+  startLocationImage: {
+    type: String,
+    required: true,
+  },
+  //
+  //
+  startPositionBalance: {
+    type: String,
     enum: ['Balanced', 'Standard', 'Legendary'],
   },
   resourceQuantity: {
     type: String,
-    required: true,
     enum: ['Sparse', 'Standard', 'Abundant', 'Random'],
-  },
-  description: {
-    type: String,
-    required: true,
-    minlength: 50,
-    maxlength: 1000,
   },
   mods: {
     type: String,

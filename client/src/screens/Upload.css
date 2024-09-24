@@ -138,6 +138,12 @@ textarea {
   color: #556b2f;
 }
 
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 768px) {
   .upload-page {
     padding: 15px;

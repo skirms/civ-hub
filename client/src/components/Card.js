@@ -1,12 +1,16 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({ title, children }) => {
+const Card = ({ title, children, startLocationImage }) => {
   return (
     <div className="save-file-card">
-      {' '}
-      <h2>{title}</h2>
-      <div className="card-content">{children}</div>
+      <div className="card-image">
+        <img src={startLocationImage} alt="Start Location" />
+      </div>
+      <div className="card-content">
+        <h2>{title}</h2>
+        {children}
+      </div>
     </div>
   );
 };
