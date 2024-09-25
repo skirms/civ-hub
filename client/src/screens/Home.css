@@ -1,38 +1,7 @@
-.save-file-card p {
-  margin: 5px 0;
-  color: #6e6259;
-  font-size: 0.9rem;
-}
-
-.leader-info {
-  color: #1b365d;
-}
-
-.difficulty-info {
-  color: #c2571a;
-}
-
-.map-info {
-  color: #556b2f;
-}
-
-@media (max-width: 768px) {
-  .save-file-card {
-    width: 100%;
-  }
-  .save-file-list {
-    gap: 10px;
-  }
-}
-
 .homepage {
   display: flex;
   padding: 40px;
   background-color: #f2e6d4;
-}
-
-.filter-container {
-  width: 250px;
 }
 
 .save-file-list {
@@ -41,4 +10,8 @@
   justify-content: flex-start;
   gap: 20px;
   margin-left: 40px;
+}
+
+.filter-container {
+  width: 250px;
 }

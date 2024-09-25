@@ -5,6 +5,8 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-right: 40px;
+  position: sticky;
+  top: 0;
 }
 
 .filter-group {
@@ -20,7 +22,8 @@
 }
 
 .filter-options {
-  display: none;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .filter-group .filter-options {

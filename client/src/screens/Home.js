@@ -69,22 +69,13 @@ const Home = () => {
             >
               <Card
                 title={file.title}
+                leader={file.leader}
+                difficulty={file.gameDifficulty}
+                speed={file.gameSpeed}
+                map={file.map}
+                mapSize={file.mapSize}
                 startLocationImage={file.startLocationImage}
-              >
-                <p>
-                  <strong>Leader: </strong>
-                  {file.leader}
-                </p>
-                <p>
-                  <strong>Difficulty: </strong>
-                  {file.gameDifficulty}
-                </p>
-                <p>
-                  <strong>Map: </strong>
-                  {file.map}
-                </p>
-                <Button text="View Details" variant="primary" />
-              </Card>
+              />
             </Link>
           ))
         ) : (

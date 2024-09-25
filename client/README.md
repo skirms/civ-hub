@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+Civ Hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Civ Hub is a web app for sharing Civilization VI save games. It allows users to upload, filter, and download save games.
 
-## Available Scripts
+Tech Stack
+Server-Side:
 
-In the project directory, you can run:
+    Node.js
+    Express
+    MongoDB
+    Mongoose
+    Cloudinary
+    Multer
 
-### `npm start`
+Client-Side:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    React
+    Axios
+    React Router DOM
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Setup
+Server-Side:
 
-### `npm test`
+cd server
+npm i express mongoose multer cloudinary dotenv
+npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Client-Side:
 
-### `npm run build`
+cd client
+npm i react react-dom axios react-router-dom
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Environment Variables
+Server (.env)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+MONGO_URI=<Your MongoDB connection>
+CLOUDINARY_CLOUD_NAME=<Your Cloudinary cloud name>
+CLOUDINARY_API_KEY=<Your Cloudinary API key>
+CLOUDINARY_API_SECRET=<Your Cloudinary API secret>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Client (.env)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+REACT_APP_API_URL=http://localhost:3001/api

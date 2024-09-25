@@ -7,6 +7,8 @@ import Button from '../components/Button';
 const SaveFileDetail = () => {
   const { id } = useParams();
   const [saveFile, setSaveFile] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  //
 
   useEffect(() => {
     axios
@@ -23,48 +25,90 @@ const SaveFileDetail = () => {
     return <p>Loading...</p>;
   }
 
+  const handleImageClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="save-file-detail">
       <div className="detail-image">
-        <img src={saveFile.startLocationImage} alt="Start Location" />
+        <img
+          src={saveFile.startLocationImage}
+          alt="Start Location"
+          onClick={handleImageClick}
+        />
       </div>
+
       <div className="detail-content">
         <h2>{saveFile.title}</h2>
         <p>
+          <strong>Civilization: </strong>
+          {saveFile.civilization}
+        </p>
+        <p>
           <strong>Leader: </strong>
-          <span className="leader-info">{saveFile.leader}</span>
+          {saveFile.leader}
         </p>
         <p>
-          <strong>Difficulty: </strong>
-          <span className="difficulty-info">{saveFile.gameDifficulty}</span>
+          <strong>Ruleset: </strong>
+          {saveFile.ruleset}
         </p>
         <p>
-          <strong>Map: </strong>
-          <span className="map-info">{saveFile.map}</span>
-        </p>
-        <p>
-          <strong>Map Size: </strong>
-          {saveFile.mapSize}
+          <strong>Game Difficulty: </strong>
+          {saveFile.gameDifficulty}
         </p>
         <p>
           <strong>Game Speed: </strong>
           {saveFile.gameSpeed}
         </p>
         <p>
-          <strong>Resource Quantity: </strong>
-          {saveFile.resourceQuantity}
+          <strong>Map: </strong>
+          {saveFile.map}
         </p>
         <p>
-          <strong>Description: </strong>
-          <span className="description">{saveFile.description}</span>
+          <strong>Map Size: </strong>
+          {saveFile.mapSize}
         </p>
+
+        {saveFile.startPositionBalance && (
+          <p>
+            <strong>Start Position Balance: </strong>
+            {saveFile.startPositionBalance}
+          </p>
+        )}
+        {saveFile.resourceQuantity && (
+          <p>
+            <strong>Resource Quantity: </strong>
+            {saveFile.resourceQuantity}
+          </p>
+        )}
+
+        <p>
+          <strong>Description: </strong>
+          {saveFile.description}
+        </p>
+
+        <Button
+          text="Download"
+          onClick={() => window.open(saveFile.saveFile, '_blank')}
+          variant="primary"
+        />
       </div>
 
-      <Button
-        text="Download"
-        onClick={() => window.open(saveFile.saveFile, '_blank')}
-        variant="primary"
-      />
+      {isModalOpen && (
+        <div className="modal" onClick={handleCloseModal}>
+          <span className="close">&times;</span>
+          <img
+            className="modal-content"
+            src={saveFile.startLocationImage}
+            alt="Start Location"
+          />
+        </div>
+      )}
     </div>
   );
 };
