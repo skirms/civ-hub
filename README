@@ -5,6 +5,7 @@ Civ Hub is a web app for sharing **Civilization VI** save games. Users can uploa
 ## Getting Started
 
 ### Prerequisites
+
 Make sure you have the following installed:
 
 - **Node.js** (v14 or higher)
@@ -16,20 +17,17 @@ Make sure you have the following installed:
 #### Server Setup
 
 1. Clone the repository:
-
     ```bash
     git clone https://github.com/skirms/civ-hub
     ```
 
 2. Navigate to the server folder and install dependencies:
-
     ```bash
     cd server
     npm install
     ```
 
 3. Set up your environment variables in a `.env` file:
-
     ```bash
     MONGO_URI=<Your MongoDB connection>
     CLOUDINARY_CLOUD_NAME=<Your Cloudinary cloud name>
@@ -38,7 +36,6 @@ Make sure you have the following installed:
     ```
 
 4. Start the server:
-
     ```bash
     npm start
     ```
@@ -46,42 +43,30 @@ Make sure you have the following installed:
 #### Client Setup
 
 1. Navigate to the client folder and install dependencies:
-
     ```bash
     cd client
     npm install
     ```
 
 2. Set up your environment variables in a `.env` file:
-
     ```bash
     REACT_APP_API_URL=http://localhost:3001/api
     ```
 
 3. Start the client:
-
     ```bash
     npm start
     ```
 
-### Cross-references:
+### Cross-references
 
 - [Server Repository](https://github.com/skirms/civ-hub/tree/main/server)
 - [Client Repository](https://github.com/skirms/civ-hub/tree/main/client)
 
 ## Tech Stack
 
-| Side       | Technologies                                                        |
-|------------|---------------------------------------------------------------------|
-| **Server** | Node.js, Express, MongoDB, Mongoose, Cloudinary, Multer             |
-| **Client** | React, Axios, React Router DOM                                      |
+| Side       | Technologies                                                         |
+|------------|----------------------------------------------------------------------|
+| **Server** | Node.js, Express, MongoDB, Mongoose, Cloudinary, Multer              |
+| **Client** | React, Axios, React Router DOM                                       |
 
----
-
-### Common Issues with Rendering:
-
-1. **Spacing**: Make sure you have a blank line before and after each major section and list item. 
-2. **Tables**: Align pipes correctly for better readability.
-3. **Code blocks**: Always use triple backticks (```) before and after your code blocks.
-
-Let me know if this improves the appearance or if there are any lingering issues!
