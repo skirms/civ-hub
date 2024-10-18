@@ -65,8 +65,7 @@ Make sure you have the following installed:
 
 ## Tech Stack
 
-| Side       | Technologies                                                         |
-|------------|----------------------------------------------------------------------|
-| **Server** | Node.js, Express, MongoDB, Mongoose, Cloudinary, Multer              |
-| **Client** | React, Axios, React Router DOM                                       |
-
+| Side       | Technologies                                                        |
+|------------|---------------------------------------------------------------------|
+| **Server** | Node.js, Express, MongoDB, Mongoose, Cloudinary, Multer             |
+| **Client** | React, Axios, React Router DOM                                      |
